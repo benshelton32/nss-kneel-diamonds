@@ -1,15 +1,17 @@
-import { getSizes } from "./database.js"
+import { getSizes, setSize } from "./database.js"
 
 const sizes = getSizes()
 
-document.addEventListener(
-    "change",
-    (event) => {
-        if (event.target.name === "size") {
-            window.alert(``)
-        }
-    }
-)
+// Window Alert?
+
+// document.addEventListener(
+//     "change",
+//     (event) => {
+//         if (event.target.name === "size") {
+//             window.alert(``)
+//         }
+//     }
+// )
 
 export const DiamondSizes = () => {
     let html = "<ul>"
@@ -31,7 +33,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "size") {
-            setMetal(parseInt(event.target.value))
+            setSize(parseInt(event.target.value))
         }
     }
 )
